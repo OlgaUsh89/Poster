@@ -91,4 +91,51 @@ public class MovieManagerTest {
         String[] expected = {"Film sixth","Film fifth", "Film fourth", "Film third", "Film second", "Film first"};
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+    public void outputInReverseOrder3() {
+        MovieManager manager = new MovieManager();
+        manager.addMovie("Film first");
+        manager.addMovie("Film second");
+        manager.addMovie("Film third");
+        manager.addMovie("Film fourth");
+
+
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Film fourth", "Film third", "Film second", "Film first"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void outputInReverseOrder4() {
+        MovieManager manager = new MovieManager();
+        manager.addMovie("Film first");
+        manager.addMovie("Film second");
+        manager.addMovie("Film third");
+        manager.addMovie("Film fourth");
+        manager.addMovie("Film fifth");
+        manager.addMovie("Film sixth");
+
+
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Film sixth","Film fifth","Film fourth", "Film third", "Film second"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void outputInReverseOrder5() {
+        MovieManager manager = new MovieManager();
+        manager.addMovie("Film first");
+        manager.addMovie("Film second");
+        manager.addMovie("Film third");
+        manager.addMovie("Film fourth");
+        manager.addMovie("Film fifth");
+
+
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Film fifth","Film fourth", "Film third", "Film second", "Film first"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
 }
