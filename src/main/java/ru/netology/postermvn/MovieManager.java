@@ -5,11 +5,11 @@ public class MovieManager {
     private String[] movies = new String[0];
     private int limit;
 
-    public MovieManager() {
+    public MovieManager() { // конструктор без параметра
         this.limit = 5;
     }
 
-    public MovieManager(int limit) {
+    public MovieManager(int limit) { //конструктор с параметром
         this.limit = limit;
     }
 
@@ -28,10 +28,10 @@ public class MovieManager {
 
     public String[] findLast() {
         int resultLength;
-        if (movies.length < 5) {
+        if (movies.length < limit) {
             resultLength = movies.length;
         } else {
-            resultLength = 5;
+            resultLength = limit;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {

@@ -7,16 +7,16 @@ public class MovieManagerTest {
 
     @Test
     public void shouldRememberMovies() {
-        MovieManager manager = new MovieManager();
-        String[] actual = manager.findAll();
-        String[] expected = {};
-        Assertions.assertArrayEquals(expected, actual);
+        MovieManager manager = new MovieManager(); // создаем менеджер, по умолчанию он пустой
+        String[] actual = manager.findAll(); //менеджер, что ты запомнил?
+        String[] expected = {};// я запомнил пустой массив
+        Assertions.assertArrayEquals(expected, actual); // работает в массивах
     }
 
     @Test
     public void shouldAddMovie() {
         MovieManager manager = new MovieManager();
-        manager.addMovie("Film first");
+        manager.addMovie("Film first"); //добавление 1 фильма
         String[] actual = manager.findAll();
         String[] expected = {"Film first"};
         Assertions.assertArrayEquals(expected, actual);
